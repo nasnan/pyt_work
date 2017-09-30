@@ -6,7 +6,9 @@ boughtList = []
 
 print('Welcome!')
 
-salary = int(input('please input your salary!\n'))
+salary = input('please input your salary!\n')
+if salary.isdigit():
+    salary = int(salary)
 pay = 0
 
 while 1:
