@@ -28,8 +28,8 @@ while time <3:
                     sys.exit(0)
                 passtime += 1
             if passtime == 3:
-                locked = open('lockedname','w')
-                locked.write(name)
+                locked = open('lockedname','a')
+                locked.write('\n'+name)
                 sys.exit('错误次数太多，该用户已被锁定！')
 
     else:
