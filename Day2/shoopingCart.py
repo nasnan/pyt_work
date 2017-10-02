@@ -10,7 +10,7 @@ if logIn == '1' :
     while 1:
         goodList = []
         openGood = open('goodlist')
-        for goods in openGood.readlines():
+        for goods in openGood:
             [good, val] = goods.split()
             goodList.append([good, int(val)])
 
@@ -54,7 +54,7 @@ elif logIn == '2' :
     goodList = []
     openGood = open('goodlist')
 
-    for goods in openGood.readlines():
+    for goods in openGood:
         [good, val] = goods.split()
         goodList.append([good, int(val)])
 
