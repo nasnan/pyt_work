@@ -1,1 +1,1 @@
-{"2": {"name": "phone", "price": 5000}, "3": {"name": "bag", "price": 120}, "4": {"name": "pen", "price": 20}, "6": {"name": "glass", "price": 22}, "7": {"name": "water", "price": 2}, "5": {"name": "mirror", "price": 25}, "1": {"name": "book", "price": 50}}
+{"6": {"price": 22, "name": "glass"}, "2": {"price": 5000, "name": "phone"}, "3": {"price": 120, "name": "bag"}, "7": {"price": 2, "name": "water"}, "1": {"price": 50, "name": "book"}, "4": {"price": 20, "name": "pen"}, "5": {"price": 25, "name": "mirror"}}

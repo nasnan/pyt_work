@@ -27,7 +27,8 @@ user_list ={
 
 card_list = (
     {"id" : "101101", "owner" : "Du", "balance" : 3000, "line" : 2000 ,"isfrozen" : 0 },
-    {"id" : "101232", "owner" : "Wa", "balance" : 5250, "line" : 3300 ,"isfrozen" : 0 }
+    {"id" : "101232", "owner" : "Wa", "balance" : 5250, "line" : 3300 ,"isfrozen" : 0 },
+    {"id" : "101232", "owner" : "Du", "balance" : 350, "line" : 100 ,"isfrozen" : 0 }
 )
 
 

@@ -5,7 +5,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 
 from database import dbapi
-from conf import settings
+from conf import settings,verfy
+from core import bank
 
 db_dir = os.path.join(settings.DB_DIR,'shoopinglist.db')
 
@@ -24,13 +25,25 @@ class shop:
             print(i)
         input('输入任意键继续，返回上一级菜单')
 
+    def pay_cart(self):
+        num = 0
+        for i in self.cart_list:
+            num += i['price']
+
+        '''
+        调用bank付款
+        '''
+        test = bank.bank('Du')
+        test.pay(num)
+
+
     def show_good(self):
         while 1:
             num = 0
             for i in sorted(self.shop_list):
                 print(i,self.shop_list[i])
                 num += 1
-            choose1 = input('请输入你要购买的商品的编号,c查看购物车,q结算并退出：\n')
+            choose1 = input('请输入你要购买的商品的编号,c查看购物车,p结算,q退出：\n')
             if choose1.isdigit():
                 choose1 = int(choose1)
                 if choose1 <= num and choose1 > 0:
@@ -42,13 +55,15 @@ class shop:
             elif choose1 == 'c':
                 self.show_cart()
 
-            elif choose1 == 'q':
+            elif choose1 == 'p':
+                self.pay_cart()
 
-                pass
+            elif choose1 == 'q':
 
                 sys.exit(0)
             else:
                 print('输入错误')
+                input('输入任意键返回上一级菜单')
                 continue
 
 

@@ -7,3 +7,5 @@ sys.path.append(BASE_DIR)
 
 
 DB_DIR = os.path.join(BASE_DIR,'database')
+
+RP_DIR = os.path.join(BASE_DIR,'report')

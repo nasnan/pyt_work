@@ -1,15 +1,8 @@
-import sys
-import os
+import time
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(BASE_DIR)
 
-from database import dbapi
-from conf import settings
+time_now = time.time()
+time_local = time.localtime(time_now)
+dt = time.strftime("%Y-%m-%d %H:%M:%S",time_local)
 
-db_dir = os.path.join(settings.DB_DIR,'shoopinglist.db')
-
-shop_list = dbapi.load_data_from_db(db_dir)
-
-a = shop_list
-print(a['1']['price'])
+print(dt)
